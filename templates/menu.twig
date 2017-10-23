@@ -1,0 +1,14 @@
+{% if menu %}
+    {% if child %}
+    <ul class="menu vertical">
+    {% else %}
+    <ul class="dropdown menu" data-dropdown-menu>
+    {% endif %}
+        {% for item in menu %}
+            <li class="{{ item.classes | join(' ') }}">
+                <a href="{{ item.link }}">{{ item.title }}</a>
+                {% include "menu.twig" with {'menu': item.get_children, 'child': true} %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}

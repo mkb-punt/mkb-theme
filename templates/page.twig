@@ -1,0 +1,8 @@
+{% extends "base.twig" %}
+{% block content %}
+    {% if builder_active %}
+        {{ builder_content }}
+    {% else %}
+        {{ post.content }}
+    {% endif %}
+{% endblock %}

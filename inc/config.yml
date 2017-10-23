@@ -1,0 +1,31 @@
+mode: 'dev'
+version: '1.0.0'
+excerpt: 20
+
+styles:
+  foundation:
+    url: 'https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css'
+  app:
+    url: 'public/css/app'
+
+scripts:
+  foundation:
+    url: 'https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js'
+  app:
+      url: 'public/js/app'
+
+structure:
+    positions:
+      pk_base_header: 'header'
+      pk_base_footer: 'footer'
+    components:
+      pk_component_navbar: 'navbar'
+menus:
+     main: 'Main'
+
+widgets:
+    sidebar:
+      name: 'Sidebar'
+      desc: 'Main sidebar'
+      title_size: 'h3'
+      title_class: 'widget-title'

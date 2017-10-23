@@ -1,0 +1,15 @@
+{
+  "name": "oscar/mkb-punt",
+  "authors": [
+    {
+      "name": "MKB-Punt",
+      "email": "oscar@mkb-punt.nl"
+    }
+  ],
+  "require": {
+    "symfony/yaml": "^3.1"
+  },
+  "autoload": {
+    "psr-4": {"MKB\\Theme\\": "src/"}
+  }
+}

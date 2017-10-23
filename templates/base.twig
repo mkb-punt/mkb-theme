@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang=nl>
+<head>
+    <title>{% if wp_title %}{{ wp_title }}{% endif %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="pingback" href="{{site.pingback_url}}" />
+    <!--<link rel="shortcut icon" href="{{ theme.url }}/public/img/favicon.ico" />-->
+    {{function('wp_head')}}
+</head>
+<body class="{{body_class}}">
+{% do action('pk_base_body_start') %}
+
+<div class="wrapper-fullwidth">
+    {% do action('pk_base_before_header') %}
+    {% do action('pk_base_header') %}
+    {% do action('pk_base_after_header') %}
+
+    {% do action('pk_base_before_content') %}
+
+    {% block content %}
+        sorry no content!!!
+    {% endblock %}
+
+    {% do action('pk_base_after_content') %}
+
+    {% do action('pk_base_footer_before') %}
+    {% do action('pk_base_footer') %}
+    {% do action('pk_base_footer_after') %}
+
+    {% do action('pk_base_body_end') %}
+</div>
+{{ function('wp_footer') }}
+</body>
+</html>
